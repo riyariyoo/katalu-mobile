@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/modernizr3js"></script>
+	 <!-- <script type="text/javascript" src="js/cordova-2.7.0.js"></script> -->
+	<script type="text/javascript">
+
+ //    // Wait for Cordova to load
+ //    //
+ //    document.addEventListener("deviceready", onDeviceReady, false);
+
+ //    // Cordova is ready
+ //    //
+ //    function onDeviceReady() {
+	//     navigator.splashscreen.show();
+	    
+	//     checkConnection();
+	    
+	//     var db = window.openDatabase("kotaksuara", "1.0", "Kotak Suara", 1000000);
+	//     db.transaction(populateDB, errorCB, successCB);
+	    
+ //    }
+    
+ //    // Populate the database 
+ //    //
+ //    function populateDB(tx) {
+ //         tx.executeSql('DROP TABLE IF EXISTS PILIH');
+ //         tx.executeSql('CREATE TABLE IF NOT EXISTS PILIH (id unique, data)');
+ //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (1, "k1")');
+ //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (2, "k2")');
+ //    }
+ //        // Query the database
+ //    //
+ //    function queryDB(tx) {
+ //        tx.executeSql('SELECT * FROM PILIH', [], querySuccess, errorCB);
+ //    }
+
+ //    // Query the success callback
+ //    //
+ //    function querySuccess(tx, results) {
+ //        console.log("Returned rows = " + results.rows.length);
+ //        // this will be true since it was a select statement and so rowsAffected was 0
+ //        if (!results.rowsAffected) {
+ //            console.log('No rows affected!');
+ //            return false;
+ //        }
+ //        // for an insert statement, this property will return the ID of the last inserted row
+ //        console.log("Last inserted row ID = " + results.insertId);
+ //    }
+    
+ //    function errorCB(err) {
+	//     alert("Error processing SQL: "+err.code);
+	// }
+	
+	// function successCB() {
+	//     alert("success!");
+	// }
+    
+    
+    
+	// function checkConnection() {
+ //        var networkState = navigator.connection.type;
+
+ //        var states = {};
+ //        states[Connection.UNKNOWN]  = 'Unknown connection';
+ //        states[Connection.ETHERNET] = 'Ethernet connection';
+ //        states[Connection.WIFI]     = 'WiFi connection';
+ //        states[Connection.CELL_2G]  = 'Cell 2G connection';
+ //        states[Connection.CELL_3G]  = 'Cell 3G connection';
+ //        states[Connection.CELL_4G]  = 'Cell 4G connection';
+ //        states[Connection.CELL]     = 'Cell generic connection';
+ //        states[Connection.NONE]     = 'No network connection';
+
+ //        alert('Connection type: ' + states[networkState]);
+ //    }
+	
+ //    </script>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#nav">
+	<div class="container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<h2>Kategori</h2>
+						<ul>
+							<li>
+								<a href="#">Profil</a>
+								<div class="mp-level">
+									<h2>Profil</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li><a   href="#showtab1">Prabowo - Hatta</a></li>
+										<li><a   href="#showtab2">Jokowi - Kalla</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">Visi Misi</a>
+								<div class="mp-level">
+									<h2>Visi Misi</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li><a   href="#showvisi1">Prabowo - Hatta</a></li>
+										<li><a   href="#showvisi2">Jokowi - Kalla</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">Janji - Janji</a>
+								<div class="mp-level">
+									<h2>Janji - Janji</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li><a  href="#janji1" >Jokowidodo</a></li>
+										<li><a  href="#janji2" >Jusuf Kalla</a></li>
+										<li><a  href="#janji3" >Prabowo Subianto</a></li>
+										<li><a  href="#janji4">Hattara Jasa</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a   href="#women" >Women Issue</a></li>
+							<li><a   href="#kampanye" >Kampanye</a></li>
+							<li><a   href="#jadwal" >Jadwal Debat Kandidat</a></li>
+							<li><a   href="#pilih">Pilih</a></li>
+							<li><a   href="#peta">Peta Pemilu</a></li>
+						</ul>	
+					</div>
+				</nav>
+				<!-- /mp-menu -->
+<!-- ==================================== END OF PUSH MENU =========================================-->
+				<header>
+					<div style="float:left">
+						<a href="#" id="trigger"><img src="images/btn-menu.png"></a>	
+					</div>
+					
+					<div style="float:right">
+						<img src="images/icon.png">	
+					</div>
+				</header>
+				<div class="scroller">
+					<div class="scroller-inner">
+						<!-- Top Navigation -->
+						<div style="position:fixed; z-index:10; top:10">
+							
+						</div>
+<!-- ==================================== SLIDER ===================================================-->
+						<div class="container">	
+							<div id="cbp-fwslider" class="cbp-fwslider">
+								<ul>
+									<li><a href="#">
+										<div class="slide merah">
+											<img src="images/slide1.png" class="">
+										</div>
+									</a></li>
+									<li><a href="#">
+										<div class="slide merah">
+											<img src="images/slide2.png" class="">
+										</div>
+									</a></li>
+									<li><a href="#">
+										<div class="slide merah">
+											<img src="images/slide3.png" class="">
+										</div>
+									</a></li>
+								</ul>
+							</div> 	
+						</div><!-- /container -->
+<!-- ==================================== END OF SLIDER ==============================================-->						
+
+						<div class="kategori putih"><!-- kategori 1 -->
+							<div class="judul">
+								<h1 class="center"> CALON PRESIDEN DAN CALON WAKIL PRESIDEN</h1>
+							</div>
+							<div class="kotak-luar clearfix">
+								<div class="mediabox">
+								<img class="foto" alt="prabowo-hatta" src="images/kandidat1.png"></img>
+
+								<br></br>
+									<p>I don’t think it is feasible to turn back the clock. Whatever I would like to do, I don’t think it is feasible. I think we have to work harder to create consensus, work harder to get a mandate from the people.<p/>
+									<a href="#visimisi1" id="showvisi1" ><img src="images/btn-visimisi.png"></a>
+								</div>
+								<div class="mediabox">
+								<img class="foto" alt="prabowo-hatta" src="images/kandidat2.png"></img>
+
+								<br><br/>
+									<p>“Terwujudnya Indonesia yang Berdaulat, Mandiri dan Berkepribadian Berlandaskan Gotong Royong”</p>
+									<a href="#visimisi2" id="showvisi2" ><img src="images/btn-visimisi2.png"></a>
+								</div>
+							</div>
+						</div><!-- /visi misi 1 -->
+						<div class="kategori abuabu txt-putih" id="visimisi1" style="display:none"><!-- kategori 1 -->
+							<div class="judul">
+								<p  class="center"><img src="images/jdl-visimisi.png"></p>
+
+							</div>
+							<div class="kotak-luar clearfix">
+								<div class="misi">
+									<h3>Prabowo - Hatta</h3>
+									<ul>
+										<li>Mewujudkan Negara Kesatuan Republik Indonesia yang aman dan stabil, sejahtera, demokratis, dan berdaulat, serta berperan aktif dalam menciptakan perdamaian dunia, serta konsisten melaksanakan Pancasila dan UUD 1945</li>
+										<li>Mewujudkan Indonesia yang maju, adil, makmur, berkerakyatan, dan mandiri</li>
+										<li>Mewujudkan Indonesia yang berkeadilan sosial, dengan sumber daya manusia yang berakhlak mulia, berbudi luhur, berkualitas tinggi: sehat, cerdas, kreatif, trampil serta menguasai ilmu pengetahuan dan teknologi .</li>
+									</ul>
+								</div>
+							</div>
+						</div><!-- /visi misi 1 -->
+						<br/>
+						<div class="kategori abuabu txt-putih" id="visimisi2" style="display:none"><!-- visi misi 2 -->
+							<div class="judul">
+								<p  class="center"><img src="images/jdl-visimisi.png"></p>
+
+							</div>
+							<div class="kotak-luar clearfix">
+								<div class="misi">
+									<h3>Jokowi - JK</h3>	
+									<ul>
+										<li>Mewujudkan keamanan nasional yang mampu menjaga kedaulatan wilayah, menopang kemandirian ekonomi dengan mengamankan sumberdaya maritim, dan mencerminkan kepribadian Indonesia sebagai negara kepulauan.</li>
+										<li>Mewujudkan masyarakat maju, berkeseimbangan dan demokratis berlandaskan negara hukum.</li>
+										<li>Mewujudkan politik luar negeri bebas-aktif dan memperkuat jati diri sebagai negara maritim.</li>
+										<li>Mewujudkan kualitas hidup manusia Indonesia yang tinggi, maju dan sejahtera.</li>
+										<li>Mewujudkan bangsa yang berdaya-saing.</li>
+										<li>Mewujudkan Indonesia menjadi negara maritim yang mandiri, maju, kuat dan berbasiskan kepentingan nasional.</li>
+										<li>Mewujudkan masyarakat yang berkperibadian dalam kebudayaan.</li>
+									</ul>
+								</div>
+							</div>
+						</div><!-- /visi misi 2 -->
+						
+						<div class="kategori putih"> <!-- profil -->
+							<div class="judul">
+								<h1 class="center"><img src="images/ribbon-kiri.png"> PROFIL <img src="images/ribbon-kanan.png"></h1>
+
+								<br/> <br/> <br/>
+								<div class="mediabox">
+									<p class="center"><a href="#tabs" id="showtab1" class="btn-info">Prabowo-Hatta</a></p>
+								</div>
+
+								<div class="mediabox">
+									<p class="center"><a href="#tabs2" id="showtab2" class="btn-info">Jokowi-JK</a></p>
+								</div>
+							</div>
+							<br/> <br/> <br/>
+							<div>
+								<!-- ======================== INFORMATION TAB KANDIDAT 1 ======================== -->
+								<div id="tabs" class="tabs" style="display:none">
+									<nav>
+										<ul>
+											<li><a href="#section-1"><img src="images/profil.png" class="tab-icon"><span>Biografi</span></a></li>
+											<li><a href="#section-2"><img src="images/work.png" class="tab-icon"><span>Pekerjaan</span></a></li>
+											<li><a href="#section-3"><img src="images/edu.png" class="tab-icon"><span>Pendidikan</span></a></li>
+											<li><a href="#section-4"><img src="images/award.png" class="tab-icon"><span>Prestasi</span></a></li>
+											<li><a href="#section-5"><img src="images/org.png" class="tab-icon"><span>Organisasi</span></a></li>
+										</ul>
+									</nav>
+									<div class="content">
+										<section id="section-1">
+											<div class="mediabox">
+												<h3 class="center">Profil Prabowo</h3>
+												<div id="bioprabowo"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Profil Hatta</h3>
+												<div id="biohatta"></div>
+											</div>
+										</section>
+										<section id="section-2">
+											<div class="mediabox">
+												<h3 class="center">Pekerjaan Prabowo</h3>
+												<div id="kerjaprabowo"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Pekerjaan Hatta</h3>
+												<div id="kerjahatta"></div>
+											</div>
+										</section>
+										<section id="section-3">
+											<div class="mediabox">
+												<h3 class="center">Pendidikan Prabowo</h3>
+												<div id="eduprabowo"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Pendidikan Hatta</h3>
+												<div id="eduhatta"></div>
+											</div>
+										</section>
+										<section id="section-4">
+											<div class="mediabox">
+												<h3 class="center">Prestasi Prabowo</h3>
+												<div id="awardprabowo"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Prestasi Hatta</h3>
+												<div id="awardhatta"></div>
+											</div>
+										</section>
+										<section id="section-5">
+											<div class="mediabox">
+												<h3 class="center">Organisasi Prabowo</h3>
+												<div id="orgprabowo"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Organisasi Hatta</h3>
+												<div id="orghatta"></div>
+											</div>
+										</section>
+									</div><!-- /content -->
+								</div><!-- /tabs -->
+<!-- ======================== END OF INFORMATION TAB KANDIDAT 1 ======================== -->
+
+<!-- ======================== INFORMATION TAB KANDIDAT 2 ======================== -->
+								<div id="tabs2" class="tabs" style="display:none">
+									<nav>
+										<ul>
+											<li><a href="#section-7"><img src="images/profil.png" class="tab-icon"><span>Biografi</span></a></li>
+											<li><a href="#section-8"><img src="images/work.png" class="tab-icon"><span>Pekerjaan</span></a></li>
+											<li><a href="#section-9"><img src="images/edu.png" class="tab-icon"><span>Pendidikan</span></a></li>
+											<li><a href="#section-10"><img src="images/award.png" class="tab-icon"><span>Penghargaan</span></a></li>
+											<li><a href="#section-11"><img src="images/org.png" class="tab-icon"><span>Organisasi</span></a></li>
+										</ul>
+									</nav>
+									<div class="content">
+										<section id="section-7">
+											<div class="mediabox">
+												<img src="images/jokowi.png" alt="capres" class="foto center" />
+												<h3 class="center">PROFIL JOKOWI</h3>
+												<div id="biojokowi"></div>
+											</div>
+											<div class="mediabox">
+												<img src="images/jk.png" alt="cawapres" class="foto center" />
+												<h3 class="center">PROFIL JK</h3>
+												<div id="biojk"></div>
+											</div>
+										</section>
+										<section id="section-8">
+											<div class="mediabox">
+												<h3 class="center">Pekerjaan Jokowi</h3>
+												<div id="kerjajokowi"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Pekerjaan JK</h3>
+												<div id="kerjajk"></div>
+											</div>
+										</section>
+										<section id="section-9">
+											<div class="mediabox">
+												<h3 class="center">Pendidikan Jokowi</h3>
+												<div id="edujokowi"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Pendidikan JK</h3>
+												<div id="edujk"></div>
+											</div>
+										</section>
+										<section id="section-10">
+											<div class="mediabox">
+												<h3 class="center">Prestasi Jokowi</h3>
+												<div id="awardjokowi"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Prestasi JK</h3>
+												<div id="awardjk"></div>
+											</div>
+										</section>
+										<section id="section-11">
+											<div class="mediabox">
+												<h3 class="center">Organisasi Jokowi</h3>
+												<div id="orgjokowi"></div>
+											</div>
+											<div class="mediabox">
+												<h3 class="center">Organisasi JK</h3>
+												<div id="orgjk"></div>
+											</div>
+										</section>
+									</div><!-- /content -->
+								</div><!-- /tabs -->
+							</div> <!-- /isi -->
+						</div><!-- /profil -->
+<!-- ======================== END OF INFORMATION TAB KANDIDAT 2 ======================== -->					
+							
+						
+
+						<div class="kategori merah"><!-- janji -->
+							<div class="judul">
+								<h1 class="center txt-putih" id="janji"> JANJI-JANJI </h1>
+							</div>
+							<div class="kotak-luar clearfix putih">
+								<div >
+									<p class="center">klik foto untuk menampilkan janji, klik lagi untuk menutup janji</p>
+								<div >
+									<ul class="grid cs-style-3">
+										<li>
+											<figure>
+												<a href="#showjanji1"><img src="images/jokowi.png" alt="Jokowi" id="janji1" /></a>
+												<figcaption>
+													<h3>JOKOWI dodo</h3>
+													<span>Calon Presiden 2014</span>
+													<a href="#">@jokowidodo</a>
+												</figcaption>
+											</figure>
+										</li>
+										<!-- <li>
+											<div id="janjijokowi" class="txt-merah"></div>
+										</li> -->
+										<li>
+											<figure>
+												<a href="#showjanji2"><img src="images/jk.png" alt="Jusuf Kalla" id="janji2"/></a>
+												<figcaption>
+													<h3>Jusuf Kalla</h3>
+													<span>Calon Wakil Presiden 2014</span>
+													<a href="#">@jk</a>
+												</figcaption>
+											</figure>
+										</li>
+										<li>
+											<figure>
+												<a href="#showjanji3"><img src="images/prabowo.png" alt="capres" id="janji3"/></a>
+												<figcaption>
+													<h3>Prabowo Subiyanto</h3>
+													<span>Calon Presiden 2014</span>
+													<a href="#">@prabowo</a>
+												</figcaption>
+											</figure>
+										</li>
+										<li>
+											<figure>
+												<a href="#showjanji4"><img src="images/hatta.png" alt="cawapres" id="janji4"/></a>
+												<figcaption>
+													<h3>Hattara Jasa</h3>
+													<span>Calon Wakil Presiden 2014</span>
+													<a href="#">@hatta</a>
+												</figcaption>
+											</figure>
+										</li>
+									</ul>
+								</div>
+								<div class="txt-merah tampil-janji">
+									<div id="showjanji1" style="display:none" >
+										<h3 class="center">Janji Jokowi</h3>
+										<div id="janjijokowi"></div>
+									</div>
+									<div id="showjanji2" style="display:none">
+										<h3 class="center">Janji Jusuf Kalla</h3>
+										<div id="janjijk"></div>
+									</div>
+									<div id="showjanji3" style="display:none">
+										<h3 class="center">Janji Prabowo</h3>
+										<div id="janjiprabowo"></div>
+									</div>
+									<div id="showjanji4" style="display:none">
+										<h3 class="center">Janji Hatta</h3>
+										<div id="janjihatta"></div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div><!-- /janji -->
+						<br/>
+						<div class="kategori "><!-- kampanye -->
+							<div class="judul abuabu" id="women">
+								<h1 class="center txt-putih" id="kampanye"><img src="images/ribbon-kiri.png"> WOMEN ISSUE <img src="images/ribbon-kanan.png"></h1>
+							</div>
+							<div class="kotak-luar merah clearfix">
+								<h3 class="center">Isu-isu yang diulas calon kandidat</h3>
+								<div class="mediabox txt-merah" style="background-color:#eee">
+									<h3>Prabowo-Hatta</h3>
+								</div>
+								<div class="mediabox txt-putih">
+									<h3>Jokowi-JK</h3>
+								</div>
+							</div>
+						</div><!-- /kampanye -->
+						<div class="kategori"><!-- kampanye -->
+							<div class="judul abuabu">
+								<h1 class="center txt-merah" id="kampanye"><img src="images/ribbon-kiri.png"> KAMPANYE <img src="images/ribbon-kanan.png"></h1>
+							</div>
+							<div class="kotak-luar abuabumuda clearfix txt-putih">
+								<div >
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+							</div>
+						</div><!-- /kampanye -->
+						<br/>
+						<div class="kategori" id="jadwal"><!-- jadwal -->
+							<div class="judul merah-tua txt-putih">
+								<h1 class="center" id="kampanye"> Jadwal Debat Kandidat </h1>
+							</div>
+							<div class="kotak-luar merah clearfix" >
+								<div id="event" class="txt-putih" style="margin:30px;"></div>
+							</div>
+						</div><!-- /jadwal -->
+						<br/>
+
+
+
+						<div class="kategori putih"><!-- pilih -->
+							<div class="judul">
+								<h1 class="center" id="pilih"> PILIH </h1>
+							</div>
+							<div class="kotak-luar clearfix" data-role="main">
+								<h3 class="center">Pilih kandidat dari hati  </h3>
+								<div class="mediabox">
+									<p class="center"> <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Prabowo-Hatta</a></p>
+								</div>
+								<div class="mediabox">
+									<p class="center"><a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Jokowi-JK</a></p>
+								</div>								
+								<!-- ////////////////////////// -->
+								<div class="md-modal md-effect-1" id="modal-1">
+									<div class="md-content">
+										<h3>Selamat Anda sudah Memilih</h3>
+										<div>
+											<p>Anda Mendapatakan Stampel Pemilu</p>
+											<p class="center"><img src="images/stamp/stamp-3.png"></p>
+											<p>Besok tanggal 9 Juli jangan lupa gunakan hak suara anda</p>
+											<button class="md-close">Close me!</button>
+										</div>
+									</div>
+								</div>
+								<div class="md-overlay"></div><!-- the overlay element -->
+								<!-- ////////////////////////// -->
+							</div>
+						</div><!-- /pilih -->
+						<br/>
+						<div class="kategori merah txt-putih"><!-- peta -->
+							<div class="judul">
+								<h1 class="center" id="peta"> PETA PEMILU </h1>
+							</div>
+							<div class="kotak-luar clearfix">
+								<a href="geolocation2.php"><p class="center txt-putih">Klik disini untuk Melihat Peta Pemilu</p></a>
+							</div>
+						</div><!-- /peta -->
+						<footer class="abuabu txt-putih"> 
+							&copy 2014 s-coret semarang
+						</footer>
+						
+					</div><!-- /scroller-inner -->
+				</div><!-- /scroller -->
+				
+			</div><!-- /pusher -->
+		</div><!-- /container -->
+		
+
+
+<script src="js/jquery.js"></script>
+
+<script src="js/data.js"></script>
+<script src="js/jquery.cbpFWSlider.min.js"></script>
+<script src="js/cbpFWTabs.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/mlpushmenu.js"></script>
+<script src="js/toucheffects.js"></script>
+<script src="js/modalEffects.js"></script>
+</body>
+</html>
+
+
+<script>
+// slider
+	$( function() {
+
+		$( '#cbp-fwslider' ).cbpFWSlider();
+
+	} );
+</script>
+
+<script>
+// menupush
+	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
+		type : 'cover'
+	} );
+</script>
+
+<script>
+//tabs
+	new CBPFWTabs( document.getElementById( 'tabs' ) );
+	new CBPFWTabs( document.getElementById( 'tabs2' ) );
+</script>
+
+<script>
+//button
+$( "#showvisi1" ).click(function() {
+$( "#visimisi1" ).show( "slow" );
+});
+
+
+$( "#showvisi2" ).click(function() {
+$( "#visimisi2" ).show( "slow" );
+});
+
+$( "#showtab1" ).click(function() {
+$( "#tabs" ).show( "slow" );
+});
+
+
+$( "#showtab2" ).click(function() {
+$( "#tabs2" ).show( "slow" );
+});
+
+$("#janji1").click(function(){
+$("#showjanji1").toggle();
+});
+
+$("#janji2").click(function(){
+$("#showjanji2").toggle();
+});
+
+$("#janji3").click(function(){
+$("#showjanji3").toggle();
+});
+
+$("#janji4").click(function(){
+$("#showjanji4").toggle();
+});
+</script>

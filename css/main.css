@@ -1,0 +1,225 @@
+/*@import url(http://fonts.googleapis.com/css?family=Droid+Sans);*/
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100);*/
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+/*@import url(href=//fonts.googleapis.com/css?family=Grand+Hotel:400);
+
+
+/*@import url(http://fonts.googleapis.com/css?family=Fascinate:400);*/*/
+
+
+
+body{
+	background-color: #eee;
+	margin: 0;
+	padding: 0; 
+	font-family: Lato, sans-serif;
+}
+header{
+	position: fixed;
+	width: 100%;
+	background-color: #d6454f;
+	z-index: 100;
+	padding: 5px;
+}
+
+h1, h2, h3{l
+	
+	font-style: bold;
+}
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 28px;
+}
+h3{
+	font-size: 25px;
+}
+.merah{
+	background-color: #d6454f;
+}
+.merah-tua{
+	background-color: #a7252e;
+}
+.txt-merah{
+	color: #d6454f;	
+}
+.putih{
+	background-color: #fff;
+}
+.txt-putih{
+	color:#fff;	
+}
+.abuabu{
+	background-color: #333;
+}
+.abuabumuda{
+	background-color: #4d4d4d;
+}
+
+.slide{
+	width: 100%;
+	height: 100%;
+	display: block;
+	/*padding-bottom: 10%;
+	padding-top: 10%;*/
+}
+
+.center{
+	text-align: center;
+}
+
+.kategori{
+	/*padding: 2rem;*/
+}
+.judul{
+	padding: 2rem;
+}
+.kotak-luar{
+	width: 100%;
+	padding: 2rem;
+}
+
+.kotak-dalam{
+ width: 40%;
+ float: left;
+ /*padding-right: 10%;
+ padding-left:  10%;*/
+ /*padding: 10%;*/
+
+}
+.bagi-dua{
+	width: 50%;
+	float: left;
+	padding: 2rem;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.tab-dalam {
+    float: left; 
+    width: 30%;
+    height: auto;
+    margin: 5px; 
+    background: #ccc;
+}
+.tab-icon{
+	padding: 5px;
+}
+.foto{
+	border-radius: 100%;
+}
+.foto:hover{
+	border-radius: 10%;
+}
+
+.misi{
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+	font-family: Raleway;
+}
+.blok-biru{
+	display: block;
+	height: 100px;
+	background-color: #2574A9;	
+}
+.blok-hijau{
+	display: block;
+	height: 100px;
+	background-color: #03A678;
+}
+.btn-info{
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	border-color: #a7252e;
+	border-style: solid;
+	border-width: 0px 0px 5px;
+	border-radius: 5px;
+	padding: 10px 40px;
+	background: #d6454f repeat scroll 0% 0%;
+}
+.btn-info:hover{
+	border-color: #d6454f;
+}
+.btn-pilih1{
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	border-color: #a7252e;
+	border-style: solid;
+	border-width: 1px 1px 5px;
+	border-radius: 25px;
+	padding: 10px 40px;
+	background: #d6454f repeat scroll 0% 0%;
+}
+
+.btn-pilih1:hover{
+	color: #a7252e;
+}
+.btn-pilih2{
+	color: #d6454f;
+	font-size: 20px;
+	text-decoration: none;
+	border-color: #eee;
+	border-style: solid;
+	border-width: 1px 1px 5px;
+	border-radius: 25px;
+	padding: 10px 40px;
+	background:#fff  repeat scroll 0% 0%;
+}
+
+.btn-pilih2:hover{
+	color: #eee;
+}
+.kutip-janji{
+	background-color: #eee;
+	display: inline-block;
+	padding: 1rem 1rem 2rem;
+	border-radius: 10%;
+	border-color: #d6454f;
+}
+.tampil-janji{
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 80%;
+}
+small{
+	color: #333;
+}
+footer{
+	padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+	h1 h2 h3{
+		font-size: 16px;
+	}
+	p{
+		font-size: 12px;
+	}
+	.tampil-janji{
+		padding: 1px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}
