@@ -11,8 +11,12 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/modernizr.custom.js"></script>
 	<script src="js/modernizr3js"></script>
-	 <!-- <script type="text/javascript" src="js/cordova-2.7.0.js"></script> -->
-	<script type="text/javascript">
+	<script src="js/jquery.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/suara.js"></script>
+	<script src="js/phonegap.js"></script>
+	<script src="js/cordova.js"></script>
+	// <script type="text/javascript">
 
  //    // Wait for Cordova to load
  //    //
@@ -25,45 +29,45 @@
 	    
 	//     checkConnection();
 	    
-	//     var db = window.openDatabase("kotaksuara", "1.0", "Kotak Suara", 1000000);
-	//     db.transaction(populateDB, errorCB, successCB);
+	//     //var db = window.openDatabase("kotaksuara", "1.0", "Kotak Suara", 1000000);
+	//     //db.transaction(populateDB, errorCB, successCB);
 	    
  //    }
     
- //    // Populate the database 
- //    //
- //    function populateDB(tx) {
- //         tx.executeSql('DROP TABLE IF EXISTS PILIH');
- //         tx.executeSql('CREATE TABLE IF NOT EXISTS PILIH (id unique, data)');
- //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (1, "k1")');
- //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (2, "k2")');
- //    }
- //        // Query the database
- //    //
- //    function queryDB(tx) {
- //        tx.executeSql('SELECT * FROM PILIH', [], querySuccess, errorCB);
- //    }
+ // //    // Populate the database 
+ // //    //
+ // //    function populateDB(tx) {
+ // //         tx.executeSql('DROP TABLE IF EXISTS PILIH');
+ // //         tx.executeSql('CREATE TABLE IF NOT EXISTS PILIH (id unique, data)');
+ // //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (1, "k1")');
+ // //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (2, "k2")');
+ // //    }
+ // //        // Query the database
+ // //    //
+ // //    function queryDB(tx) {
+ // //        tx.executeSql('SELECT * FROM PILIH', [], querySuccess, errorCB);
+ // //    }
 
- //    // Query the success callback
- //    //
- //    function querySuccess(tx, results) {
- //        console.log("Returned rows = " + results.rows.length);
- //        // this will be true since it was a select statement and so rowsAffected was 0
- //        if (!results.rowsAffected) {
- //            console.log('No rows affected!');
- //            return false;
- //        }
- //        // for an insert statement, this property will return the ID of the last inserted row
- //        console.log("Last inserted row ID = " + results.insertId);
- //    }
+ // //    // Query the success callback
+ // //    //
+ // //    function querySuccess(tx, results) {
+ // //        console.log("Returned rows = " + results.rows.length);
+ // //        // this will be true since it was a select statement and so rowsAffected was 0
+ // //        if (!results.rowsAffected) {
+ // //            console.log('No rows affected!');
+ // //            return false;
+ // //        }
+ // //        // for an insert statement, this property will return the ID of the last inserted row
+ // //        console.log("Last inserted row ID = " + results.insertId);
+ // //    }
     
- //    function errorCB(err) {
-	//     alert("Error processing SQL: "+err.code);
-	// }
+ // //    function errorCB(err) {
+	// //     alert("Error processing SQL: "+err.code);
+	// // }
 	
-	// function successCB() {
-	//     alert("success!");
-	// }
+	// // function successCB() {
+	// //     alert("success!");
+	// // }
     
     
     
@@ -515,6 +519,16 @@
 							</div>
 							<div class="kotak-luar clearfix" data-role="main">
 								<h3 class="center">Pilih kandidat dari hati  </h3>
+								<div id="loading" style="display:none;text-align:center;">
+					                <b>Sabar ya ;)</b>
+					            </div>
+					            
+					            <div id="gagal" style="display:none;text-align:center;color:#F00;">
+					                <strong>Koneksi ente ngenesss broww...</strong>
+					            </div>
+					            <div id="tampilData" style="display:none;">
+					            	<div class="center" id="dataSuara"></div>
+					            </div>
 								<div class="mediabox">
 									<p class="center"> <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Prabowo-Hatta</a></p>
 								</div>
@@ -533,7 +547,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="md-overlay"></div><!-- the overlay element -->
+								<div class="md-overlay" id="tutupModal"></div><!-- the overlay element -->
 								<!-- ////////////////////////// -->
 							</div>
 						</div><!-- /pilih -->
@@ -558,9 +572,7 @@
 		
 
 
-<script src="js/jquery.js"></script>
 
-<script src="js/data.js"></script>
 <script src="js/jquery.cbpFWSlider.min.js"></script>
 <script src="js/cbpFWTabs.js"></script>
 <script src="js/classie.js"></script>
@@ -594,6 +606,9 @@
 </script>
 
 <script>
+$( "#tutupModal" ).click(function() {
+$( "#modal-1" ).hide();
+});
 //button
 $( "#showvisi1" ).click(function() {
 $( "#visimisi1" ).show( "slow" );
