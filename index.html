@@ -471,8 +471,8 @@
 										</p>
 									</form>	
 								</div>
-								<p class="center">
-									<a href="#" onclick="return getSuccessOutput();">lihat hasil voting</a>|<a href="stamp.html">ambil stampel pemilu</a>
+								<p class="center txt-merah">
+									<a href="hasil.html" onclick="return getSuccessOutput();">lihat hasil voting</a>|<a href="stamp.html">ambil stampel pemilu</a>
 								</p>
 							</div>
 						</div><!-- /pilih -->
@@ -567,23 +567,6 @@ $("#showjanji3").toggle();
 $("#janji4").click(function(){
 $("#showjanji4").toggle();
 });
-</script>
-<!-- ini faillll huaaaaaaa >;O-->
-<!-- mau ambil return php  -->
-<script type="text/javascript">
-function getSuccessOutput() {
-    $.ajax({
-        url:'http://katalu.url.ph/ajaxku.php',
-        success: function (response) {
-            console.log(data, response);
-            $('#output').html(response);
-        },
-        error: function () {
-            $('#output').html('yoho: there was an error!');
-        },
-    });
-    return false;
-}
 </script>
 <!-- //script form jquery -->
 <script>
