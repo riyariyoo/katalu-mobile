@@ -1,0 +1,57 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+
+	<form id="form" method="POST" action="http://localhost/kataluDB/inputSuara.php">
+
+		<label><h5 class="center">Masukkan No id</h5></label>
+		<input type="text" name="noid" placeholder="KTP/SIM/Kartu Pelajar" required>
+		<br/>
+		<input type="radio" name="pilihan" value="k1" required>Prabowo-Hatta<br>
+		<input type="radio" name="pilihan" value="k2" required>Jokowi-JK
+		<!-- <button type="submit" name="submit" value="Add"><h1>ADD</h1> </button> -->
+		<input type="submit" name="submit" value="Add">
+		<!-- <a type="submit" name="submit" href="#">submit</a> -->
+
+
+	</form>	
+	<a href="#" onclick="return getSuccessOutput();"> test success </a> | <a href="#" onclick="return getFailOutput(); return false;"> test failure</a>
+<div id="output">waiting for action</div>
+
+	<script type="text/javascript">
+
+
+// handles the click event, sends the query
+function getSuccessOutput() {
+    $.ajax({
+        url:'http://localhost/kataluDB/ajaxku.php',
+        complete: function (response) {
+            $('#output').html(response.responseText);
+        },
+        error: function () {
+            $('#output').html('yoho: there was an error!');
+        },
+    });
+    return false;
+}
+// handles the click event, sends the query
+function getFailOutput() {
+    $.ajax({
+        url:'http://10.0.0.2/kataluDB/ajaxku.php',
+        success: function (response) {
+            console.log(data, response);
+            $('#output').html(response);
+        },
+        error: function () {
+            $('#output').html('yoho: there was an error!');
+        },
+    });
+    return false;
+}
+</script>
+</body>
+</html>

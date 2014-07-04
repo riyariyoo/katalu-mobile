@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+		<div id="landmark-1" data-landmark-id="1">
+		<form>
+
+			<label><h5 class="center">Masukkan No id</h5></label>
+			<p class="center">
+				<input type="text" name="noid" placeholder="KTP/SIM/Kartu Pelajar" required>
+			</p>
+			<br/>
+			<div class="mediabox">
+				<p class="center"> 
+				<input type="radio" name="pilihan" value="k1" required>
+				<h5 class="center">Prabowo-Hatta</h5>
+				<!-- <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Prabowo-Hatta</a> -->
+				</p>
+			</div>
+			<div class="mediabox">
+				<p class="center">
+				<input type="radio" name="pilihan" value="k2" required><h5 class="center">Jokowi-JK</h5>
+				<!-- <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Jokowi-JK</a> -->
+				</p>
+				
+			</div>	
+			<br/>
+			<p class="center">
+				<input type="submit" name="submit" value="Pilih" class="center btn-info">
+			</p>
+		</form>	
+	</div>
+<script>
+$('form').submit(function(){
+	    var landmarkID = $(this).parent().attr('data-landmark-id');
+	    var postData = $(this).serialize();
+	     
+	    $.ajax({
+	        type: 'POST',
+	        data: postData+'&amp;lid='+landmarkID,
+	        url: 'http://localhost/kataluDB/inputSuara.php',
+	        success: function(data){
+	            console.log(data);
+	            alert('Your comment was successfully added');
+	        },
+	        error: function(){
+	            console.log(data);
+	            alert('There was an error adding your comment');
+	        }
+	    });
+	     
+	    return false;
+	});
+</script>
+</body>
+</html>

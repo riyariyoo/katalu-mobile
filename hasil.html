@@ -1,0 +1,41 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery.js"></script>
+</head>
+<body onload="return getSuccessOutput()">
+
+	<div class="stamp-atas">
+		<h2 class="center">Hasil Voting</h2>	
+	</div>
+	
+	<div class="stamp-tengah">
+		
+	</div>
+
+	<div class="stamp-bawah">
+		<p class="center"> Trimakasih telah berpartisipasi</p>
+		<p class="center"><small>Besok tanggal 9 Juli jangan lupa gunakan hak suara anda</small></p>
+	</div>
+
+</body>
+<!-- ini faillll huaaaaaaa >;O-->
+<!-- mau ambil return php  -->
+<script type="text/javascript">
+function getSuccessOutput() {
+    $.ajax({
+        url:'http://katalu.url.ph/ajaxku.php',
+        success: function (response) {
+            console.log(data, response);
+            $('#output').html(response);
+        },
+        error: function () {
+            $('#output').html('yoho: there was an error!');
+        },
+    });
+    return false;
+}
+</script>
+
+</html>

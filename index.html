@@ -10,84 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="js/modernizr.js"></script>
 	<script src="js/modernizr.custom.js"></script>
-	<script src="js/modernizr3js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/data.js"></script>
-	<script src="js/suara.js"></script>
 	<script src="js/phonegap.js"></script>
 	<script src="js/cordova.js"></script>
-	// <script type="text/javascript">
-
- //    // Wait for Cordova to load
- //    //
- //    document.addEventListener("deviceready", onDeviceReady, false);
-
- //    // Cordova is ready
- //    //
- //    function onDeviceReady() {
-	//     navigator.splashscreen.show();
-	    
-	//     checkConnection();
-	    
-	//     //var db = window.openDatabase("kotaksuara", "1.0", "Kotak Suara", 1000000);
-	//     //db.transaction(populateDB, errorCB, successCB);
-	    
- //    }
-    
- // //    // Populate the database 
- // //    //
- // //    function populateDB(tx) {
- // //         tx.executeSql('DROP TABLE IF EXISTS PILIH');
- // //         tx.executeSql('CREATE TABLE IF NOT EXISTS PILIH (id unique, data)');
- // //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (1, "k1")');
- // //         tx.executeSql('INSERT INTO PILIH (id, data) VALUES (2, "k2")');
- // //    }
- // //        // Query the database
- // //    //
- // //    function queryDB(tx) {
- // //        tx.executeSql('SELECT * FROM PILIH', [], querySuccess, errorCB);
- // //    }
-
- // //    // Query the success callback
- // //    //
- // //    function querySuccess(tx, results) {
- // //        console.log("Returned rows = " + results.rows.length);
- // //        // this will be true since it was a select statement and so rowsAffected was 0
- // //        if (!results.rowsAffected) {
- // //            console.log('No rows affected!');
- // //            return false;
- // //        }
- // //        // for an insert statement, this property will return the ID of the last inserted row
- // //        console.log("Last inserted row ID = " + results.insertId);
- // //    }
-    
- // //    function errorCB(err) {
-	// //     alert("Error processing SQL: "+err.code);
-	// // }
-	
-	// // function successCB() {
-	// //     alert("success!");
-	// // }
-    
-    
-    
-	// function checkConnection() {
- //        var networkState = navigator.connection.type;
-
- //        var states = {};
- //        states[Connection.UNKNOWN]  = 'Unknown connection';
- //        states[Connection.ETHERNET] = 'Ethernet connection';
- //        states[Connection.WIFI]     = 'WiFi connection';
- //        states[Connection.CELL_2G]  = 'Cell 2G connection';
- //        states[Connection.CELL_3G]  = 'Cell 3G connection';
- //        states[Connection.CELL_4G]  = 'Cell 4G connection';
- //        states[Connection.CELL]     = 'Cell generic connection';
- //        states[Connection.NONE]     = 'No network connection';
-
- //        alert('Connection type: ' + states[networkState]);
- //    }
-	
- //    </script>
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#nav">
 	<div class="container">
@@ -506,12 +432,10 @@
 								<h1 class="center" id="kampanye"> Jadwal Debat Kandidat </h1>
 							</div>
 							<div class="kotak-luar merah clearfix" >
-								<div id="event" class="txt-putih" style="margin:30px;"></div>
+								<div id="event" class="txt-putih jadwal"></div>
 							</div>
 						</div><!-- /jadwal -->
 						<br/>
-
-
 
 						<div class="kategori putih"><!-- pilih -->
 							<div class="judul">
@@ -519,36 +443,37 @@
 							</div>
 							<div class="kotak-luar clearfix" data-role="main">
 								<h3 class="center">Pilih kandidat dari hati  </h3>
-								<div id="loading" style="display:none;text-align:center;">
-					                <b>Sabar ya ;)</b>
-					            </div>
-					            
-					            <div id="gagal" style="display:none;text-align:center;color:#F00;">
-					                <strong>Koneksi ente ngenesss broww...</strong>
-					            </div>
-					            <div id="tampilData" style="display:none;">
-					            	<div class="center" id="dataSuara"></div>
-					            </div>
-								<div class="mediabox">
-									<p class="center"> <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Prabowo-Hatta</a></p>
-								</div>
-								<div class="mediabox">
-									<p class="center"><a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Jokowi-JK</a></p>
-								</div>								
-								<!-- ////////////////////////// -->
-								<div class="md-modal md-effect-1" id="modal-1">
-									<div class="md-content">
-										<h3>Selamat Anda sudah Memilih</h3>
-										<div>
-											<p>Anda Mendapatakan Stampel Pemilu</p>
-											<p class="center"><img src="images/stamp/stamp-3.png"></p>
-											<p>Besok tanggal 9 Juli jangan lupa gunakan hak suara anda</p>
-											<button class="md-close">Close me!</button>
+								<div id="landmark-1" data-landmark-id="1">
+									<form>
+
+										<label><h5 class="center">Masukkan No id</h5></label>
+										<p class="center">
+											<input type="text" name="noid" placeholder="KTP/SIM/Kartu Pelajar" required>
+										</p>
+										<br/>
+										<div class="mediabox">
+											<p class="center"> 
+											<input type="radio" name="pilihan" value="k1" required>
+											<h5 class="center">Prabowo-Hatta</h5>
+											<!-- <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Prabowo-Hatta</a> -->
+											</p>
 										</div>
-									</div>
+										<div class="mediabox">
+											<p class="center">
+											<input type="radio" name="pilihan" value="k2" required><h5 class="center">Jokowi-JK</h5>
+											<!-- <a class="md-trigger btn-info" data-modal="modal-1" href="#" >Pilih Jokowi-JK</a> -->
+											</p>
+											
+										</div>	
+										<br/>
+										<p class="center">
+											<input type="submit" name="submit" value="Pilih" class="center btn-info">
+										</p>
+									</form>	
 								</div>
-								<div class="md-overlay" id="tutupModal"></div><!-- the overlay element -->
-								<!-- ////////////////////////// -->
+								<p class="center">
+									<a href="#" onclick="return getSuccessOutput();">lihat hasil voting</a>|<a href="stamp.html">ambil stampel pemilu</a>
+								</p>
 							</div>
 						</div><!-- /pilih -->
 						<br/>
@@ -557,7 +482,7 @@
 								<h1 class="center" id="peta"> PETA PEMILU </h1>
 							</div>
 							<div class="kotak-luar clearfix">
-								<a href="geolocation2.php"><p class="center txt-putih">Klik disini untuk Melihat Peta Pemilu</p></a>
+								<a href="http://bencerdas.web.id/indi//geolocation2.php"><p class="center txt-putih">Klik disini untuk Melihat Peta Pemilu</p></a>
 							</div>
 						</div><!-- /peta -->
 						<footer class="abuabu txt-putih"> 
@@ -578,7 +503,6 @@
 <script src="js/classie.js"></script>
 <script src="js/mlpushmenu.js"></script>
 <script src="js/toucheffects.js"></script>
-<script src="js/modalEffects.js"></script>
 </body>
 </html>
 
@@ -643,4 +567,44 @@ $("#showjanji3").toggle();
 $("#janji4").click(function(){
 $("#showjanji4").toggle();
 });
+</script>
+<!-- ini faillll huaaaaaaa >;O-->
+<!-- mau ambil return php  -->
+<script type="text/javascript">
+function getSuccessOutput() {
+    $.ajax({
+        url:'http://katalu.url.ph/ajaxku.php',
+        success: function (response) {
+            console.log(data, response);
+            $('#output').html(response);
+        },
+        error: function () {
+            $('#output').html('yoho: there was an error!');
+        },
+    });
+    return false;
+}
+</script>
+<!-- //script form jquery -->
+<script>
+$('form').submit(function(){
+	    var landmarkID = $(this).parent().attr('data-landmark-id');
+	    var postData = $(this).serialize();
+	     
+	    $.ajax({
+	        type: 'POST',
+	        data: postData+'&amp;lid='+landmarkID,
+	        url: 'http://katalu.url.ph/inputSuara.php',
+	        success: function(data){
+	            console.log(data);
+	            alert('Your comment was successfully added');
+	        },
+	        error: function(){
+	            console.log(data);
+	            alert('There was an error adding your comment');
+	        }
+	    });
+	     
+	    return false;
+	});
 </script>
